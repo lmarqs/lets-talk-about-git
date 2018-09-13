@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "scripts": {
+    "commit": "git-cz",
+    "prerelease": "npm run lint",
+    "release": "standard-version",
+    "start": "docker-compose up",
+    "lint": "npm run lint:js && npm run lint:md && npm run lint:sh && npm run lint:yml",
+    "lint:js": "find-source '**/*.js' | xargs -r eslint",
+    "lint:md": "find-source '**/*.md' | xargs -r markdownlint --ignore CHANGELOG.md",
+    "lint:sh": "find-source '**/*.sh' | xargs -r shellcheck",
+    "lint:yml": "find-source '**/*.(yaml|yml)' | xargs -r yamllint"
+  },
+  "private": true,
+  "devDependencies": {
+    "@azu/github-label-setup": "^3.0.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@project/scripts": "file:scripts",
+    "auto-changelog": "^1.16.3",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "markdownlint-cli": "^0.22.0",
+    "shellcheck": "^0.4.1",
+    "standard-version": "^7.1.0",
+    "yaml-lint": "^1.2.4",
+    "yargs": "^15.3.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": "standard"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
