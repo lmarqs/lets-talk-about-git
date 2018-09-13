@@ -1,1 +1,1 @@
-Dinos
+Dinossauro
