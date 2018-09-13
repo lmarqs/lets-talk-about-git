@@ -1,0 +1,12 @@
+{
+  "name": "@project/scripts",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "find-source": "./find-source.js"
+  },
+  "dependencies": {
+    "glob": "^7.1.6",
+    "ignore": "^5.1.4"
+  }
+}
