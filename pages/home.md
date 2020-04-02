@@ -1,36 +1,18 @@
 ---
 layout: home
 permalink: /
-title: Lets Talk about Git - The workshop
+title: Lets Talk about Git
 nav_exclude: true
 ---
-# Lets Talk about git
+# Lets Talk about git - The workshop
 
-Estrutura:
+## Estrutura:
 
-## Base
-WIP
+### História
+Porque relembrar é viver
 
-## Desafios
+### Conceitos base
+Recapitulando alguns conceitos para melhor aproveitamento do conteúdo
 
-Prepare uma pasta temporária em seu computador e inicie um repositório
-
-```sh
-mkdir tmp
-cd tmp
-git init
-echo tmp > README.md
-git add .
-git commit -m 'init repo'
-git tag -a root -m root
-```
-
-### The good
-Conceitos comuns do dia-a-dia utilizados quando tudo ocorre normalmente
-
-### The bad
-Quando as coisas vão mal e precisam de correção
-
-### The ugly
-Artificios tão feios que nem deveriam existir... (mas são divertidos mesmo assim)
-
+### Desafios
+A pratica leva a perfeição
