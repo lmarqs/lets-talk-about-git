@@ -1,0 +1,32 @@
+{
+  "title": [
+    {
+      "pattern": "/^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\(\\w+\\))?\\:\\s/",
+      "message": "Your title needs to be prefixed with a topic"
+    }
+  ],
+  "body": [
+    {
+      "pattern": ".{1,}",
+      "message": "You need literally anything in your description"
+    }
+  ],
+  "head.ref": [
+    {
+      "pattern": "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)/",
+      "message": "Your branch name is invalid"
+    }
+  ],
+  "commits": [
+    {
+      "pattern": "1",
+      "message": "Your PR must contain 1 single commit"
+    }
+  ],
+  "labels.0.name": [
+    {
+      "pattern": "Type",
+      "message": "Please add a label 'Type: *'"
+    }
+  ]
+}

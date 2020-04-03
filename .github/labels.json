@@ -157,17 +157,15 @@
     "color": "ffd412",
     "description": "Changes to CI configuration files and scripts",
     "aliases": [
-      "travis",
-      "ci",
-      "circleci"
+      "ci"
     ]
   },
   {
-    "name": "Type: Question",
+    "name": "Type: Content",
     "color": "cc317c",
     "description": "Further information is requested",
     "aliases": [
-      "question"
+      "content"
     ]
   }
 ]
